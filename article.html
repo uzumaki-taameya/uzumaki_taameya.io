@@ -29,37 +29,16 @@
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
       </button>
-      <button class="btn btn--ghost touch-target" aria-label="共有" onclick="copyArticleUrl()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="18" cy="5" r="3"></circle>
-          <circle cx="6" cy="12" r="3"></circle>
-          <circle cx="18" cy="19" r="3"></circle>
-          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-        </svg>
-      </button>
     </div>
   </header>
 
   <main class="container">
     <article class="article-header">
       <!-- アイキャッチ画像 -->
-      <img class="article-eyecatch" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&auto=format&fit=crop&q=80" alt="記事アイキャッチ">
-
       <!-- 記事タイトル -->
       <h1 class="article-title">noteのデザインシステムを参考に個人サイトを作ってみた話</h1>
 
       <!-- 著者情報メタバー -->
-      <div class="article-author-info">
-        <div class="article-author-profile">
-          <img class="avatar avatar-md" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&h=160&fit=crop&crop=faces" alt="山田 太郎">
-          <div>
-            <div class="article-author-name">山田 太郎</div>
-            <div class="article-date">2026年11月22日 19:30 · 読了目安 3分</div>
-          </div>
-        </div>
-        <button id="articleFollowBtn" class="btn btn--secondary btn--sm" onclick="toggleArticleFollow()">フォロー</button>
-      </div>
 
       <!-- 記事本文 -->
       <div class="article-content">
@@ -114,80 +93,13 @@
       </div>
 
       <!-- 記事フッター (リアクション & タグ) -->
-      <footer class="article-footer">
-        <div class="article-tags">
-          <span class="tag tag--primary">#DesignSystem</span>
-          <span class="tag">#WebDevelopment</span>
-          <span class="tag">#GitHubPages</span>
-          <span class="tag">#CSS</span>
-        </div>
-
-        <!-- いいねボタン -->
-        <div class="flex items-center justify-between" style="margin-top: var(--space-6); margin-bottom: var(--space-8);">
-          <button id="likeBtn" class="like-btn touch-target" onclick="handleLike()">
-            <svg id="likeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-            </svg>
-            <span id="likeCount">42</span>
-          </button>
-          <button class="btn btn--ghost btn--sm" onclick="copyArticleUrl()">この記事をシェアする</button>
-        </div>
-
-        <!-- 著者プロフィールカード -->
-        <div style="background-color: var(--color-bg-surface); padding: var(--space-5); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-          <div class="flex items-center gap-3">
-            <img class="avatar avatar-lg" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&h=160&fit=crop&crop=faces" alt="山田 太郎">
-            <div>
-              <div style="font-weight: var(--weight-bold); font-size: var(--text-md);">山田 太郎</div>
-              <div class="text-secondary text-xs">@taroyamada</div>
-            </div>
-          </div>
-          <p class="text-sm" style="margin-top: var(--space-3); line-height: var(--leading-snug);">
-            ソフトウェアエンジニア。デザインシステム、Web標準、フロントエンドアーキテクチャに関心があります。
-          </p>
-        </div>
-      </footer>
     </article>
   </main>
 
   <!-- Bottom Navigation (Android標準スタイル) -->
-  <nav class="bottom-nav">
-    <a href="./index.html" class="bottom-nav__item">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-      </svg>
-      <span>ホーム</span>
-    </a>
-    <button class="bottom-nav__item" onclick="showToast('検索機能は準備中です')">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-      <span>見つける</span>
-    </button>
-    <button class="bottom-nav__item" onclick="showToast('通知はありません')">
-      <div style="position: relative; display: inline-flex;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-        </svg>
-      </div>
-      <span>通知</span>
-    </button>
-    <button class="bottom-nav__item" onclick="showToast('マイページを表示中')">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-        <circle cx="12" cy="7" r="4"></circle>
-      </svg>
-      <span>マイページ</span>
-    </button>
-  </nav>
+
 
   <!-- スナックバー / トースト -->
-  <div id="snackbar" class="snackbar" style="display: none;">
-    <span id="snackbarText">メッセージ</span>
-    <button class="btn btn--ghost btn--sm" style="color: var(--color-text-inverse); padding: 0;" onclick="hideToast()">閉じる</button>
-  </div>
 
   <script>
     // テーマ切り替え機能
