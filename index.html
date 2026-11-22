@@ -99,20 +99,6 @@
       }
     }
 
-      const btn = document.getElementById('followBtn');
-      if (btn.classList.contains('btn--secondary')) {
-        btn.classList.remove('btn--secondary');
-        btn.classList.add('btn--primary');
-        btn.textContent = 'フォロー中';
-        showToast('フォローしました');
-      } else {
-        btn.classList.remove('btn--primary');
-        btn.classList.add('btn--secondary');
-        btn.textContent = 'フォロー';
-        showToast('フォローを解除しました');
-      }
-    }
-
     // スナックバー / トースト表示
     let toastTimeout;
     function showToast(message) {
