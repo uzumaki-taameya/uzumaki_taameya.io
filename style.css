@@ -833,6 +833,9 @@ a {
 
 .article-content p {
   margin-bottom: var(--space-6);
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .article-content h2 {
