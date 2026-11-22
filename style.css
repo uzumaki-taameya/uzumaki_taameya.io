@@ -107,7 +107,7 @@
 
 :root {
   /* Font Family */
-  --font-sans:   'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic UI',
+  --font-sans:   'BIZ UDPGothic', 'BIZ UDP Gothic', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic UI',
                  -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif:  'Noto Serif JP', 'Hiragino Mincho ProN', Georgia, serif;
   --font-mono:   'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
