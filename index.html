@@ -43,18 +43,25 @@
               <span class="tag">Design</span>
               <span>2026/11/22</span>
             </div>
-            <div class="flex items-center gap-1">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
-              <span>42</span>
-            </div>
           </div>
         </div>
       </a>
 
       <!-- 記事カード 2 -->
-
+      <a href="./article.html" class="card">
+        <div class="card__body">
+          <h3 class="card__title">noteのデザインシステムを参考に個人サイトを作ってみた話</h3>
+          <p class="card__excerpt">
+            コンテンツファーストな思想と黒を基調としたミニマルなトーン＆マナー。ダークモードやアクセシビリティへの配慮を含めた設計プロセスをまとめました。
+          </p>
+          <div class="card__meta">
+            <div class="card__meta-left">
+              <span class="tag">Design</span>
+              <span>2026/11/22</span>
+            </div>
+          </div>
+        </div>
+      </a>
     </section>
   </main>
 
@@ -92,8 +99,6 @@
       }
     }
 
-    // フォローボタン切り替え
-    function toggleFollow() {
       const btn = document.getElementById('followBtn');
       if (btn.classList.contains('btn--secondary')) {
         btn.classList.remove('btn--secondary');
